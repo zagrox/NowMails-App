@@ -1,0 +1,154 @@
+import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import Modal from './Modal';
+import Loader from './Loader';
+import Icon, { ICONS } from './Icon';
+
+interface ExportContactsModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+    apiKey: string;
+    selectedStatuses?: string[];
+    listName?: string;
+    onSuccess: () => void;
+    onError: (msg: string) => void;
+}
+
+const ExportContactsModal = ({ isOpen, onClose, apiKey, selectedStatuses, listName, onSuccess, onError }: ExportContactsModalProps) => {
+    const { t } = useTranslation(['contacts', 'common', 'emailLists']);
+    const [fileFormat, setFileFormat] = useState('Csv');
+    const [compression, setCompression] = useState('None');
+    const [fileName, setFileName] = useState('');
+    const [isExporting, setIsExporting] = useState(false);
+
+    useEffect(() => {
+        if (isOpen) {
+            const baseName = listName ? listName.replace(/\s/g, '_') : 'contacts-export';
+            const ext = compression === 'Zip' ? 'zip' : fileFormat.toLowerCase();
+            setFileName(`${baseName}.${ext}`);
+        } else {
+            // Reset state on close
+            setFileFormat('Csv');
+            setCompression('None');
+            setFileName('');
+            setIsExporting(false);
+        }
+    }, [isOpen, fileFormat, compression, listName]);
+
+    const handleExport = async (e: React.FormEvent) => {
+        e.preventDefault();
+
+        let rule = '';
+        if (selectedStatuses && selectedStatuses.length > 0) {
+            rule = selectedStatuses.map(s => `Status = '${s}'`).join(' OR ');
+        } else if (listName) {
+            const escapedListName = listName.replace(/'/g, "''");
+            rule = `listname = '${escapedListName}'`;
+        }
+
+        if (!rule) {
+            onError('No contacts specified for export.');
+            return;
+        }
+
+        setIsExporting(true);
+
+        const body = {
+            FileFormat: fileFormat,
+            Rule: rule,
+            CompressionFormat: compression,
+            FileName: fileName,
+        };
+
+        try {
+            // ElasticEmail API for export returns a text response with the URL
+            const response = await fetch('https://api.elasticemail.com/v4/contacts/export', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-ElasticEmail-ApiKey': apiKey,
+                },
+                body: JSON.stringify(body)
+            });
+
+            if (!response.ok) {
+                let errorMessage = `HTTP error! status: ${response.status}`;
+                try {
+                    const errorData = await response.json();
+                    errorMessage = errorData.Error || 'An unknown API error occurred.';
+                } catch (e) {
+                    // response was not json, use default message
+                }
+                throw new Error(errorMessage);
+            }
+
+            const responseText = await response.text();
+            try {
+                const responseData = JSON.parse(responseText);
+                const downloadUrl = responseData.Link;
+
+                if (!downloadUrl) {
+                    throw new Error("API response did not contain a valid download link.");
+                }
+
+                // Trigger download in a new tab.
+                window.open(downloadUrl, '_blank');
+                
+                onSuccess();
+            } catch (jsonError: any) {
+                console.error("Failed to parse export response:", responseText, jsonError);
+                throw new Error("Could not understand the server's response for the export request.");
+            }
+        } catch (err: any) {
+            onError(err.message);
+        } finally {
+            setIsExporting(false);
+        }
+    };
+
+    const translatedStatuses = (selectedStatuses || [])
+        .map(s => t(s.toLowerCase().replace(/\s/g, ''), { ns: 'contacts', defaultValue: s }))
+        .join(', ');
+
+    return (
+        <Modal isOpen={isOpen} onClose={onClose} title={t('exportContacts')}>
+            <form onSubmit={handleExport} className="modal-form">
+                <div className="info-message">
+                    <strong>{listName ? t('list', { ns: 'emailLists'}) : t('selectedForExport')}:</strong>
+                    <p>{listName ? listName : translatedStatuses}</p>
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="fileFormat">{t('fileFormat')}</label>
+                    <select id="fileFormat" value={fileFormat} onChange={e => setFileFormat(e.target.value)}>
+                        <option value="Csv">{t('csv')}</option>
+                        <option value="Xml">{t('xml')}</option>
+                        <option value="Json">{t('json')}</option>
+                    </select>
+                </div>
+
+                <div className="form-group">
+                    <label htmlFor="compression">{t('compression')}</label>
+                    <select id="compression" value={compression} onChange={e => setCompression(e.target.value)}>
+                        <option value="None">{t('none')}</option>
+                        <option value="Zip">{t('zip')}</option>
+                    </select>
+                </div>
+                
+                <div className="form-group">
+                    <label htmlFor="fileName">{t('fileNameOptional')}</label>
+                    <input id="fileName" type="text" value={fileName} onChange={e => setFileName(e.target.value)} placeholder={`contacts-export.${fileFormat.toLowerCase()}`} />
+                </div>
+
+                <div className="form-actions" style={{ marginTop: '1rem' }}>
+                    <button type="button" className="btn" onClick={onClose} disabled={isExporting}>{t('cancel')}</button>
+                    <button type="submit" className="btn btn-primary" disabled={isExporting}>
+                        {isExporting ? <Loader /> : <><Icon>{ICONS.DOWNLOAD}</Icon> <span>{t('export')}</span></>}
+                    </button>
+                </div>
+            </form>
+        </Modal>
+    );
+};
+
+export default ExportContactsModal;

@@ -1,0 +1,20 @@
+
+{
+    "guidesTitle": "Guides & Tutorials",
+    "guidesSubtitle": "Learn how to make the most out of NowMails with these step-by-step guides for essential features.",
+    "askAnythingPlaceholder": "Ask anything about email marketing, campaigns, deliverability...",
+
+    "guideAIAssistantTitle": "How to Use the AI Assistant",
+    "guideAIAssistantStep1Title": "Example Questions",
+    "guideAIAssistantStep1Desc": "The AI Assistant is a general-purpose assistant that can help you with a wide range of topics related to email marketing and using NowMails. Here are some examples of what you can ask:<ul><li>How do I improve my email open rates?</li><li>What is the difference between a List and a Segment?</li><li>Can you give me 5 subject line ideas for a summer sale?</li><li>Explain what DMARC is in simple terms.</li><li>How can I add a new contact to a list?</li><li>What are some best practices for email design?</li><li>Help me write a short welcome email for new subscribers.</li></ul>Feel free to ask anything you're curious about!",
+
+    "guideCompetitiveAdvantagesTitle": "Why NowMails? (Competitive Advantages)",
+    "guideCompetitiveAdvantagesStep1Title": "Modern & Intuitive UX",
+    "guideCompetitiveAdvantagesStep1Desc": "NowMails is designed for modern growth teams. Enjoy a fluid drag-and-drop email builder, powerful contact management, and interactive campaign scheduling.",
+    "guideCompetitiveAdvantagesStep2Title": "Pay-as-you-go Economy",
+    "guideCompetitiveAdvantagesStep2Desc": "No mandatory high-tier subscriptions. Buy credits and use them whenever you need. Your credits never expire, giving you total control over your marketing budget.",
+    "guideCompetitiveAdvantagesStep3Title": "High Deliverability & Reliability",
+    "guideCompetitiveAdvantagesStep3Desc": "Rest easy knowing your messages reach their destination with high inbox placement, robust IP reputation management, and high uptime.",
+    "guideCompetitiveAdvantagesStep4Title": "Enterprise Inboxing Rates",
+    "guideCompetitiveAdvantagesStep4Desc": "Leverage our carefully managed IP pools and technical expertise to ensure your emails pass through filters and land right in the primary inbox."
+}

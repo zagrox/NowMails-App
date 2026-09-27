@@ -1,0 +1,61 @@
+/* --- SMTP VIEW --- */
+.main-credential-card .smtp-card-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+.smtp-detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+.smtp-detail-item label {
+    font-size: 0.9rem;
+    color: var(--subtle-text-color);
+}
+.smtp-detail-item strong {
+    font-size: 1.1rem;
+}
+.monospace { font-family: monospace; }
+.secret-value-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.secret-value-wrapper input {
+    flex-grow: 1;
+}
+.secret-value-wrapper button {
+    flex-shrink: 0;
+}
+.full-span {
+    grid-column: 1 / -1;
+}
+.smtp-additional-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+.smtp-additional-card .card-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.smtp-additional-card .card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.smtp-additional-detail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+}
+.smtp-additional-detail label {
+    color: var(--subtle-text-color);
+}
+
+.new-api-key-display {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}

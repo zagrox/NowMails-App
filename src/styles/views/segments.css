@@ -1,0 +1,156 @@
+/* --- SEGMENTS VIEW --- */
+.segment-card {
+    display: flex;
+    flex-direction: column;
+}
+.segment-card-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.segment-card-header h3 {
+    font-size: 1.1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.segment-card-body {
+    padding: 1rem;
+    flex-grow: 1;
+}
+.segment-card-body .segment-rule {
+    background: var(--subtle-background);
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.85rem;
+    word-break: break-all;
+    margin-top: 0.5rem;
+}
+.segment-card-footer {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--subtle-text-color);
+}
+
+/* --- RULE BUILDER --- */
+.rule-builder-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.rule-builder {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.rule-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.rule-group + .rule-group {
+    padding-top: 1rem;
+}
+
+.rule-conjunction-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.rule-conjunction-toggle::before,
+.rule-conjunction-toggle::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+.rule-conjunction-toggle button {
+    padding: 0.25rem 1.5rem;
+    border: 1px solid var(--border-color);
+    background: var(--surface-color);
+    border-radius: 99px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.rule-conjunction-toggle button.active {
+    background: var(--secondary-color);
+    color: white;
+    border-color: var(--secondary-color);
+}
+
+.rule-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto;
+    gap: 0.75rem;
+    align-items: center;
+}
+@media (max-width: 600px) {
+    .rule-row {
+        grid-template-columns: 1fr;
+    }
+}
+.add-rule-btn-container {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-color);
+}
+.add-rule-btn {
+    width: 100%;
+    background-color: var(--subtle-background);
+}
+.remove-rule-btn {
+    margin-left: auto;
+}
+
+/* Evaluation Section */
+.segment-evaluation-section {
+    background-color: var(--subtle-background);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.segment-rule-preview {
+    font-size: 0.9rem;
+    color: var(--subtle-text-color);
+}
+.segment-rule-preview code {
+    display: block;
+    margin-top: 0.5rem;
+    font-family: monospace;
+    color: var(--text-color);
+    word-break: break-all;
+}
+.segment-evaluation-action {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-color);
+}
+.segment-evaluation-action .loader {
+    width: 20px;
+    height: 20px;
+}
+.evaluation-result {
+    font-weight: 500;
+}
+.evaluation-result.error {
+    color: var(--danger-color);
+}

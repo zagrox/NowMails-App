@@ -1,0 +1,352 @@
+
+
+.guides-view-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* AI Prompt Bar */
+.ai-prompt-container {
+    position: relative;
+    margin-bottom: 2rem;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    padding: 1rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.ai-prompt-textarea {
+    flex-grow: 1;
+    border: none;
+    background: none;
+    resize: none;
+    font-family: inherit;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    padding: 0.5rem;
+    max-height: 200px;
+    line-height: 1.6;
+    overflow-y: auto;
+}
+.ai-prompt-textarea:focus {
+    outline: none;
+}
+.ai-prompt-textarea::placeholder {
+    color: var(--subtle-text-color);
+}
+
+.ai-prompt-submit-btn {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+.ai-prompt-submit-btn:hover {
+    background-color: var(--secondary-color-dark);
+}
+.ai-prompt-submit-btn:disabled {
+    background-color: var(--border-color);
+    cursor: not-allowed;
+}
+
+.guides-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+/* Navigation Sidebar (Left) */
+.guides-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: sticky;
+    top: 1.5rem;
+}
+
+.guides-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-align: left;
+    font: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--subtle-text-color);
+    transition: all 0.2s ease;
+}
+
+.guides-nav-item:hover {
+    background-color: var(--subtle-background);
+    color: var(--text-color);
+}
+
+.guides-nav-item.active {
+    background-color: var(--secondary-color);
+    color: white;
+    box-shadow: 0 2px 8px rgba(var(--info-color), 0.2);
+}
+
+.guides-nav-item .icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+/* Content Panel (Right) */
+.guides-content.card {
+    padding: 0;
+}
+
+.guides-content-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.guides-content-header .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.guides-content-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.guides-content-body {
+    padding: 2rem;
+}
+
+
+/* Step-by-step list improvements */
+.step-by-step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.step-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--subtle-background);
+    border: 1px solid var(--border-color);
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-content h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+}
+
+.step-content p {
+    margin: 0;
+    color: var(--subtle-text-color);
+    line-height: 1.7;
+}
+
+.step-content code, .step-content strong {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.step-content code {
+    background-color: var(--subtle-background);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+    border: 1px solid var(--border-color);
+}
+
+/* Help Section */
+.help-section {
+    /* Styles removed as per user request to move the divider */
+}
+
+.help-section-header {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+.help-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.help-card {
+    padding: 1.5rem;
+    text-align: start; /* FIX: Use logical property for LTR/RTL text alignment */
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid var(--border-color);
+    background-color: var(--surface-color);
+    font-family: inherit; /* for button reset */
+    font-size: inherit; /* for button reset */
+    color: inherit; /* for button reset */
+}
+.help-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: var(--secondary-color);
+}
+
+.help-card:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.help-card:disabled:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--border-color);
+}
+
+.help-card .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--secondary-color);
+}
+
+.help-card h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.help-card p {
+    color: var(--subtle-text-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.soon-badge-overlay {
+    position: absolute;
+    inset-block-start: 1rem; /* FIX: Use logical property for top position */
+    inset-inline-end: 1rem; /* FIX: Use logical property for right/left position */
+    background-color: var(--warning-color);
+    color: var(--primary-color);
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem;
+    border-radius: 99px;
+    text-transform: uppercase;
+}
+html[data-theme='dark'] .soon-badge-overlay {
+    color: var(--primary-color);
+}
+
+.contact-info-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--subtle-background);
+    border-radius: 8px;
+}
+
+.contact-info-item .icon {
+    width: 2rem;
+    height: 2rem;
+    color: var(--secondary-color);
+}
+
+.contact-info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-text span {
+    font-size: 0.9rem;
+    color: var(--subtle-text-color);
+}
+
+.contact-info-text strong {
+    font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .guides-layout {
+        grid-template-columns: 1fr;
+    }
+    .guides-nav {
+        position: relative;
+        top: 0;
+        flex-direction: row;
+        overflow-x: auto;
+        padding-bottom: 1rem; /* For scrollbar space */
+        scrollbar-width: thin;
+        scrollbar-color: var(--border-color) transparent;
+    }
+    .guides-nav::-webkit-scrollbar {
+        height: 6px;
+    }
+    .guides-nav::-webkit-scrollbar-thumb {
+        background-color: var(--border-color);
+        border-radius: 3px;
+    }
+    .guides-nav-item {
+        flex-shrink: 0;
+        background-color: var(--surface-color);
+        border-color: var(--border-color);
+    }
+}
+
+.guides-view-container > hr {
+    border: none;
+    border-top: 1px solid var(--border-color);
+    margin: 2rem 0;
+}

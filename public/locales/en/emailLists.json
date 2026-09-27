@@ -1,0 +1,27 @@
+
+{
+    "searchListsPlaceholder": "Search lists...",
+    "newListNamePlaceholder": "New list name...",
+    "createList": "Create List",
+    "listCreatedSuccess": "List \"{{listName}}\" created successfully.",
+    "listCreatedError": "Failed to create list: {{error}}",
+    "confirmDeleteList": "Are you sure you want to delete the list \"{{listName}}\"? This will not delete the contacts in it.",
+    "listDeletedSuccess": "List \"{{listName}}\" deleted successfully.",
+    "listDeletedError": "Failed to delete list: {{error}}",
+    "listRenamedSuccess": "List renamed to \"{{newName}}\" successfully.",
+    "listRenamedError": "Failed to rename list: {{error}}",
+    "noListsForQuery": "No lists found for \"{{query}}\".",
+    "noListsFound": "No lists created yet",
+    "noListsFoundDesc": "Lists are a great way to organize your contacts for targeted campaigns. Create your first list to get started.",
+    "renameList": "Rename list",
+    "viewContactsInList": "View contacts in this list",
+    "deleteList": "Delete list",
+    "contactsInList": "Contacts in \"{{listName}}\"",
+    "listHasNoContacts": "This list has no contacts.",
+    "renameEntityType": "Rename {{type}} \"{{name}}\"",
+    "newEntityName": "New {{type}} name",
+    "list": "List",
+    "allowUnsubscribeHelpText": "Allowing unsubscribes is recommended and required by law in many regions.",
+    "listIsEmptyTitle": "This list is empty",
+    "listIsEmptyMessage": "Add contacts to this list manually or by importing a file to start sending them campaigns."
+}

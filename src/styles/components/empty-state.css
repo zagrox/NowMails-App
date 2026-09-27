@@ -1,0 +1,53 @@
+.empty-state-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+.empty-state-icon-wrapper {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--subtle-background);
+    margin-bottom: 1.5rem;
+}
+
+.empty-state-icon-wrapper .icon {
+    width: 36px;
+    height: 36px;
+    color: var(--secondary-color);
+}
+
+.empty-state-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin: 0 0 0.5rem;
+}
+
+.empty-state-message {
+    font-size: 1rem;
+    color: var(--subtle-text-color);
+    max-width: 450px;
+    line-height: 1.6;
+    margin: 0 0 1.5rem;
+}
+
+.empty-state-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}

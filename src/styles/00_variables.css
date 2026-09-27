@@ -1,0 +1,53 @@
+:root {
+  --primary-color: #1A2B3C;
+  --secondary-color: #007BFF;
+  --secondary-color-dark: #0069D9;
+  --background-color: #F7F9FC;
+  --surface-color: #FFFFFF;
+  --surface-color-rgb-for-sticky: 255, 255, 255;
+  --subtle-background: #F8FAFC;
+  --input-background-color: var(--background-color);
+  --text-color: #334155;
+  --subtle-text-color: #64748B;
+  --border-color: #E2E8F0;
+  --border-color-rgb: 226, 232, 240;
+  --danger-color: #EF4444;
+  --success-color: #10B981;
+  --warning-color: #F59E0B;
+  --info-color: #3B82F6;
+  --overlay-background: rgba(0, 0, 0, 0.5);
+  --auth-gradient-start: #E9F1FF;
+  --tooltip-background: rgba(0, 0, 0, 0.8);
+  --tooltip-border-color: rgba(255, 255, 255, 0.1);
+  --font-family: 'Inter', sans-serif;
+  color-scheme: light;
+  
+  /* CSS Variables for logical transforms */
+  --slide-in-translateX: 100%;
+  --settings-panel-translateX: 100%;
+  --sidebar-translateX: -100%;
+}
+
+html[data-theme='dark'] {
+  --primary-color: #F8FAFC;         /* Slate 50 */
+  --secondary-color: #3B82F6;       /* Blue 500 */
+  --secondary-color-dark: #2563EB;  /* Blue 600 */
+  --background-color: #040c22;      /* Slate 900 - Main app background */
+  --surface-color: #000d2c;         /* Slate 800 - Cards, Sidebars, Headers */
+  --surface-color-rgb-for-sticky: 30, 41, 59;
+  --subtle-background: #020617;     /* Slate 950 - Inputs, recessed areas */
+  --input-background-color: #020617;
+  --text-color: #F1F5F9;            /* Slate 100 */
+  --subtle-text-color: #94A3B8;     /* Slate 400 */
+  --border-color: #0c213f;          /* Slate 700 */
+  --border-color-rgb: 51, 65, 85;
+  --danger-color: #EF4444;          /* Red 500 */
+  --success-color: #22C55E;         /* Green 500 */
+  --warning-color: #F59E0B;         /* Amber 500 */
+  --info-color: #60A5FA;            /* Blue 400 */
+  --overlay-background: rgba(2, 6, 23, 0.7);
+  --auth-gradient-start: #1e293b;
+  --tooltip-background: rgba(15, 23, 42, 0.9);
+  --tooltip-border-color: var(--border-color);
+  color-scheme: dark;
+}

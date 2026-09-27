@@ -1,0 +1,104 @@
+/* --- DOMAINS VIEW --- */
+.domains-view-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.domains-description-header {
+    text-align: center;
+    padding: 1rem 0;
+}
+.domains-description-header h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+.domains-description-header p {
+    color: var(--subtle-text-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.domain-status-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* New Centered Add Domain Section */
+.add-domain-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+.add-domain-form {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    max-width: 450px;
+}
+.add-domain-form input {
+    flex-grow: 1;
+}
+.add-domain-form .btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* Styles for the How-To Modal */
+.step-by-step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.step-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--subtle-background);
+    border: 1px solid var(--border-color);
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-content h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+}
+
+.step-content p {
+    margin: 0;
+    color: var(--subtle-text-color);
+    line-height: 1.7;
+}
+
+.step-content code, .step-content strong {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.step-content code {
+    background-color: var(--subtle-background);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    font-size: 0.9em;
+    border: 1px solid var(--border-color);
+}

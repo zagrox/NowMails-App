@@ -1,0 +1,33 @@
+/* --- VIEW SWITCHER --- */
+.view-switcher {
+    display: flex;
+    background-color: var(--subtle-background);
+    padding: 0.25rem;
+    border-radius: 8px;
+    align-items: center;
+}
+.view-switcher .view-mode-btn {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--subtle-text-color);
+    transition: all 0.2s;
+}
+.view-switcher .view-mode-btn .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.view-switcher .view-mode-btn:hover {
+    color: var(--text-color);
+}
+.view-switcher .view-mode-btn.active {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}

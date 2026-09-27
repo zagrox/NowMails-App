@@ -1,0 +1,152 @@
+{
+  "events": [
+    {
+      "title_en": "New Year's Day",
+      "gregorianDate": "01-01"
+    },
+    {
+      "title_en": "Martin Luther King Jr. Day",
+      "date": "2024-01-15"
+    },
+    {
+      "title_en": "Martin Luther King Jr. Day",
+      "date": "2025-01-20"
+    },
+    {
+      "title_en": "Valentine's Day",
+      "gregorianDate": "02-14"
+    },
+    {
+      "title_en": "International Women's Day",
+      "gregorianDate": "03-08"
+    },
+    {
+      "title_en": "St. Patrick's Day",
+      "gregorianDate": "03-17"
+    },
+    {
+      "title_en": "Easter Sunday",
+      "date": "2024-03-31"
+    },
+    {
+      "title_en": "Easter Sunday",
+      "date": "2025-04-20"
+    },
+    {
+      "title_en": "April Fools' Day",
+      "gregorianDate": "04-01"
+    },
+    {
+      "title_en": "Earth Day",
+      "gregorianDate": "04-22"
+    },
+    {
+      "title_en": "International Labour Day",
+      "gregorianDate": "05-01"
+    },
+    {
+      "title_en": "Star Wars Day",
+      "gregorianDate": "05-04"
+    },
+    {
+      "title_en": "Mother's Day",
+      "date": "2024-05-12"
+    },
+    {
+      "title_en": "Mother's Day",
+      "date": "2025-05-11"
+    },
+    {
+      "title_en": "Memorial Day (US)",
+      "date": "2024-05-27"
+    },
+    {
+      "title_en": "Memorial Day (US)",
+      "date": "2025-05-26"
+    },
+    {
+      "title_en": "World Environment Day",
+      "gregorianDate": "06-05"
+    },
+    {
+      "title_en": "Father's Day",
+      "date": "2024-06-16"
+    },
+    {
+      "title_en": "Father's Day",
+      "date": "2025-06-15"
+    },
+    {
+      "title_en": "Social Media Day",
+      "gregorianDate": "06-30"
+    },
+    {
+      "title_en": "Independence Day (US)",
+      "gregorianDate": "07-04"
+    },
+    {
+      "title_en": "World Chocolate Day",
+      "gregorianDate": "07-07"
+    },
+    {
+      "title_en": "Labor Day (US)",
+      "date": "2024-09-02"
+    },
+    {
+      "title_en": "Labor Day (US)",
+      "date": "2025-09-01"
+    },
+    {
+      "title_en": "International Coffee Day",
+      "gregorianDate": "10-01"
+    },
+    {
+      "title_en": "World Teachers' Day",
+      "gregorianDate": "10-05"
+    },
+    {
+      "title_en": "United Nations Day",
+      "gregorianDate": "10-24"
+    },
+    {
+      "title_en": "Halloween",
+      "gregorianDate": "10-31"
+    },
+    {
+      "title_en": "Thanksgiving (US)",
+      "date": "2024-11-28"
+    },
+    {
+      "title_en": "Thanksgiving (US)",
+      "date": "2025-11-27"
+    },
+    {
+      "title_en": "Black Friday",
+      "date": "2024-11-29"
+    },
+    {
+      "title_en": "Black Friday",
+      "date": "2025-11-28"
+    },
+    {
+      "title_en": "Cyber Monday",
+      "date": "2024-12-02"
+    },
+    {
+      "title_en": "Cyber Monday",
+      "date": "2025-12-01"
+    },
+    {
+      "title_en": "Christmas Eve",
+      "gregorianDate": "12-24"
+    },
+    {
+      "title_en": "Christmas Day",
+      "gregorianDate": "12-25"
+    },
+    {
+      "title_en": "New Year's Eve",
+      "gregorianDate": "12-31"
+    }
+  ]
+}

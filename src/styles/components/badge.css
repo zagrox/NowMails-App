@@ -1,0 +1,43 @@
+/* --- BADGE --- */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 99px;
+    white-space: nowrap;
+}
+.badge-default {
+    background-color: var(--border-color);
+    color: var(--subtle-text-color);
+}
+.badge-success { background-color: rgba(var(--success-color), 0.1); color: var(--success-color); }
+.badge-danger { background-color: rgba(var(--danger-color), 0.1); color: var(--danger-color); }
+.badge-warning { background-color: rgba(var(--warning-color), 0.1); color: var(--warning-color); }
+.badge-info { background-color: rgba(var(--info-color), 0.1); color: var(--info-color); }
+
+/* Recipient count badge */
+.badge-total-recipients {
+    background-color: var(--secondary-color);
+    color: white;
+    min-width: 60px;
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.badge-total-recipients .loader {
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+    border-top-color: white;
+    border-left-color: white;
+    border-right-color: white;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}

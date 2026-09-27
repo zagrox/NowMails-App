@@ -1,0 +1,97 @@
+/* --- TABLE --- */
+.table-container {
+    overflow-x: auto;
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0.75rem 1rem;
+    text-align: inherit;
+    border-bottom: 1px solid var(--border-color);
+}
+thead th {
+    font-weight: 600;
+    color: var(--subtle-text-color);
+    font-size: 0.9rem;
+    background: var(--subtle-background);
+}
+tbody tr {
+    transition: background-color 0.2s;
+}
+tbody tr:last-child th,
+tbody tr:last-child td {
+    border-bottom: none;
+}
+tbody tr:hover {
+    background-color: var(--subtle-background);
+}
+.table-container td .loader {
+    width: 20px;
+    height: 20px;
+    border-width: 2px;
+}
+.table-container-simple { overflow: visible; background: transparent; border: none; border-radius: 0; }
+.table-container-simple table {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--surface-color);
+}
+.simple-table th, .simple-table td {
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+}
+.simple-table tr:last-child td {
+    border-bottom: none;
+}
+
+.table-link-button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    text-align: inherit;
+    text-decoration: none;
+}
+.table-link-button:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* --- VIEW HEADERS --- */
+.view-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+}
+.search-bar {
+    position: relative;
+    flex-grow: 1;
+    min-width: 250px;
+}
+.search-bar input { padding-inline-start: 2.5rem; }
+.search-bar .icon { position: absolute; inset-inline-start: 0.75rem; top: 50%; transform: translateY(-50%); color: var(--subtle-text-color); }
+.header-actions, .create-list-form { display: flex; gap: 0.6rem; align-items: center; }
+.create-list-form .btn { flex-shrink: 0; white-space: nowrap; }
+.create-list-form input { min-width: 200px; }
+
+/* --- GLOBAL OVERLAY --- */
+.page-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--overlay-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}

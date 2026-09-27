@@ -1,0 +1,297 @@
+/* --- ACCOUNT & PROFILE STYLES --- */
+.account-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.account-card {
+    display: flex;
+    gap: 1rem;
+    padding: 1.25rem;
+    align-items: center;
+}
+.card-icon-wrapper {
+    background: var(--subtle-background);
+    padding: 0.75rem;
+    border-radius: 50%;
+    color: var(--secondary-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.card-details .card-title {
+    font-size: 0.9rem;
+    color: var(--subtle-text-color);
+    margin-bottom: 0.25rem;
+}
+.card-details .card-content {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.account-view-container {
+    width: 100%;
+}
+.profile-hero {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    background: var(--surface-color);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.profile-actions {
+    align-self: flex-start;
+}
+.profile-field-value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+    background-color: var(--subtle-background);
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    min-height: calc(1.5rem + 1.7em);
+    display: flex;
+    align-items: center;
+    line-height: 1.7;
+    word-break: break-word;
+    text-align: start;
+}
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    background: var(--subtle-background);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.profile-avatar .icon {
+    width: 40px;
+    height: 40px;
+    color: var(--secondary-color);
+}
+.profile-info h3 {
+    font-size: 1.75rem;
+    margin: 0;
+}
+.profile-email {
+    color: var(--subtle-text-color);
+    margin-bottom: 0.5rem;
+}
+.profile-meta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+.reputation-score {
+    font-size: inherit;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+.reputation-score.good { color: var(--success-color); }
+.reputation-score.medium { color: var(--warning-color); }
+.reputation-score.bad { color: var(--danger-color); }
+
+.edit-profile-avatar-uploader {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.edit-profile-avatar-preview {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--subtle-background);
+    border: 2px solid var(--border-color);
+}
+.edit-profile-avatar-uploader .form-group {
+    flex-grow: 1;
+}
+.edit-profile-avatar-uploader label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 28px;
+    flex-shrink: 0;
+}
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.toggle-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--border-color);
+    transition: .4s;
+    border-radius: 28px;
+}
+.toggle-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .toggle-slider {
+    background-color: var(--secondary-color);
+}
+input:checked + .toggle-slider:before {
+    transform: translateX(22px);
+}
+
+/* Credit History Modal */
+.credit-history-table td:last-child {
+    text-align: end;
+    font-weight: 600;
+    color: var(--success-color);
+}
+
+.account-tab-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.account-tab-card {
+    background-color: var(--surface-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+.account-tab-card-header {
+    padding: 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.account-tab-card-header h3 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+.account-tab-card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.account-tab-card-body > p:first-of-type {
+    color: var(--subtle-text-color);
+    margin-top: -0.5rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+.account-tab-card .form-actions {
+    margin-top: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--subtle-background);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem -1.5rem -1.5rem;
+    border-radius: 0 0 8px 8px;
+}
+
+.embed-code-display {
+    background-color: var(--subtle-background);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 1rem;
+    overflow-x: auto;
+}
+.embed-code-display pre {
+    margin: 0;
+}
+.embed-code-display code {
+    font-family: monospace;
+    font-size: 0.85rem;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+/* --- PWA INSTALL MODAL --- */
+.pwa-install-modal-content {
+    line-height: 1.6;
+}
+
+.pwa-install-instructions {
+    text-align: center;
+}
+
+.pwa-install-instructions p {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.instruction-icon-ios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: var(--subtle-background);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.instruction-icon-ios .icon {
+    width: 28px;
+    height: 28px;
+    color: var(--secondary-color);
+}
+
+.instruction-icon-ios span {
+    font-size: 1.5rem;
+    color: var(--subtle-text-color);
+}
+
+
+@media (max-width: 768px) {
+    .profile-hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-hero > div:first-child {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .profile-actions {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .profile-actions .btn {
+        width: 100%;
+    }
+}

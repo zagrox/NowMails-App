@@ -1,0 +1,220 @@
+{
+  "events": [
+    {
+      "title_en": "New Year's Day",
+      "gregorianDate": "01-01"
+    },
+    {
+      "title_en": "Martin Luther King Jr. Day",
+      "date": "2025-01-20"
+    },
+    {
+      "title_en": "Assassination of Griboyedov",
+      "gregorianDate": "02-11"
+    },
+    {
+      "title_en": "Valentine's Day",
+      "gregorianDate": "02-14"
+    },
+    {
+      "title_en": "International Women's Day",
+      "gregorianDate": "03-08"
+    },
+    {
+      "title_en": "Pi Day",
+      "gregorianDate": "03-14"
+    },
+    {
+      "title_en": "International Day of Happiness",
+      "gregorianDate": "03-20"
+    },
+    {
+      "title_en": "Earth Day",
+      "gregorianDate": "04-22"
+    },
+    {
+      "title_en": "World Design Day",
+      "gregorianDate": "04-27"
+    },
+    {
+      "title_en": "International Labour Day",
+      "gregorianDate": "05-01"
+    },
+    {
+      "title_en": "International Midwives' Day",
+      "gregorianDate": "05-05"
+    },
+    {
+      "title_en": "World Red Cross and Red Crescent Day",
+      "gregorianDate": "05-08"
+    },
+    {
+      "title_en": "International Nurses Day",
+      "gregorianDate": "05-12"
+    },
+    {
+      "title_en": "International Museum Day",
+      "gregorianDate": "05-18"
+    },
+    {
+      "title_en": "Memorial Day (US)",
+      "date": "2025-05-26"
+    },
+    {
+      "title_en": "World No Tobacco Day",
+      "gregorianDate": "05-31"
+    },
+    {
+      "title_en": "World Environment Day",
+      "gregorianDate": "06-05"
+    },
+    {
+      "title_en": "World Handicrafts Day",
+      "gregorianDate": "06-10"
+    },
+    {
+      "title_en": "World Day Against Child Labour",
+      "gregorianDate": "06-12"
+    },
+    {
+      "title_en": "World Blood Donor Day",
+      "gregorianDate": "06-14"
+    },
+    {
+      "title_en": "Father's Day",
+      "gregorianDate": "06-16"
+    },
+    {
+      "title_en": "World Day to Combat Desertification",
+      "gregorianDate": "06-17"
+    },
+    {
+      "title_en": "International Day Against Drug Abuse",
+      "gregorianDate": "06-26"
+    },
+    {
+      "title_en": "Start of World Breastfeeding Week",
+      "gregorianDate": "08-01"
+    },
+    {
+      "title_en": "International Lefthanders Day",
+      "gregorianDate": "08-13"
+    },
+    {
+      "title_en": "World Photography Day",
+      "gregorianDate": "08-19"
+    },
+    {
+      "title_en": "Labor Day (US)",
+      "date": "2025-09-01"
+    },
+    {
+      "title_en": "World Suicide Prevention Day",
+      "gregorianDate": "09-10"
+    },
+    {
+      "title_en": "September 11 attacks",
+      "gregorianDate": "09-11"
+    },
+    {
+      "title_en": "Programmers' Day",
+      "gregorianDate": "09-13"
+    },
+    {
+      "title_en": "International Day of Peace",
+      "gregorianDate": "09-21"
+    },
+    {
+      "title_en": "World Tourism Day",
+      "gregorianDate": "09-27"
+    },
+    {
+      "title_en": "International Translation Day",
+      "gregorianDate": "09-30"
+    },
+    {
+      "title_en": "International Day of Older Persons",
+      "gregorianDate": "10-01"
+    },
+    {
+      "title_en": "World Space Week begins",
+      "gregorianDate": "10-04"
+    },
+    {
+      "title_en": "World Teachers' Day",
+      "gregorianDate": "10-05"
+    },
+    {
+      "title_en": "World Post Day",
+      "gregorianDate": "10-09"
+    },
+    {
+      "title_en": "World Day Against the Death Penalty",
+      "gregorianDate": "10-10"
+    },
+    {
+      "title_en": "International Day of the Girl Child",
+      "gregorianDate": "10-11"
+    },
+    {
+      "title_en": "World Standards Day",
+      "gregorianDate": "10-14"
+    },
+    {
+      "title_en": "White Cane Safety Day",
+      "gregorianDate": "10-15"
+    },
+    {
+      "title_en": "World Food Day",
+      "gregorianDate": "10-16"
+    },
+    {
+      "title_en": "International Day for the Eradication of Poverty",
+      "gregorianDate": "10-17"
+    },
+    {
+      "title_en": "Halloween",
+      "gregorianDate": "10-31"
+    },
+    {
+      "title_en": "World Diabetes Day",
+      "gregorianDate": "11-14"
+    },
+    {
+      "title_en": "International Men's Day",
+      "gregorianDate": "11-19"
+    },
+    {
+      "title_en": "Universal Children's Day",
+      "gregorianDate": "11-20"
+    },
+    {
+      "title_en": "Thanksgiving (US)",
+      "date": "2025-11-27"
+    },
+    {
+      "title_en": "International Day for the Elimination of Violence against Women",
+      "gregorianDate": "11-25"
+    },
+    {
+      "title_en": "World AIDS Day",
+      "gregorianDate": "12-01"
+    },
+    {
+      "title_en": "International Day of Persons with Disabilities",
+      "gregorianDate": "12-03"
+    },
+    {
+      "title_en": "Human Rights Day",
+      "gregorianDate": "12-10"
+    },
+    {
+      "title_en": "International Mountain Day",
+      "gregorianDate": "12-11"
+    },
+    {
+      "title_en": "Christmas Day",
+      "gregorianDate": "12-25"
+    }
+  ]
+}

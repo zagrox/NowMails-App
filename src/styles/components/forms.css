@@ -1,0 +1,246 @@
+/* --- FORMS & INPUTS --- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+.form-group label {
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+input[type="text"], input[type="email"], input[type="password"], input[type="search"], input[type="number"], input[type="date"], input[type="datetime-local"], input[type="url"], input[type="tel"], select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--input-background-color);
+    color: var(--text-color);
+    font: inherit;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(var(--info-color), 0.2);
+}
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+.form-grid .full-width {
+    grid-column: 1 / -1;
+}
+
+.from-email-composer {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--input-background-color);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.from-email-composer:focus-within {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(var(--info-color), 0.2);
+}
+.from-email-composer input,
+.from-email-composer select {
+    border: none;
+    background: transparent;
+    padding: 0.75rem;
+    box-shadow: none !important;
+    outline: none;
+    height: 100%;
+}
+.from-email-composer input {
+    flex-grow: 1;
+    min-width: 80px;
+}
+.from-email-composer .from-email-at {
+    color: var(--subtle-text-color);
+    font-weight: 500;
+    padding: 0 0.25rem;
+}
+.from-email-composer select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-inline-end: 2.5rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+html[dir='rtl'] .from-email-composer select {
+    background-position: left 0.5rem center;
+}
+html[data-theme='dark'] .from-email-composer select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%239ca3af' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+}
+
+.form-separator {
+    grid-column: 1 / -1;
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 1.5rem 0;
+}
+
+/* Custom Radio */
+.custom-radio {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.custom-radio .radio-label {
+    font-weight: 500;
+    font-size: 1rem;
+}
+.custom-radio .radio-description {
+    font-size: 0.9rem;
+    color: var(--subtle-text-color);
+    margin-top: 0.25rem;
+}
+.radio-checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--surface-color);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+.custom-radio:hover input ~ .radio-checkmark {
+    border-color: var(--secondary-color);
+}
+.custom-radio input:checked ~ .radio-checkmark {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.custom-radio input:checked ~ .radio-checkmark:after {
+    display: block;
+}
+.custom-radio .radio-checkmark:after {
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+/* Custom Checkbox */
+.custom-checkbox {
+    display: block;
+    position: relative;
+    padding-inline-start: 30px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.custom-checkbox input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+}
+.custom-checkbox .checkbox-label {
+    font-weight: 500;
+    font-size: 1rem;
+}
+.checkbox-checkmark {
+    position: absolute;
+    top: 2px;
+    inset-inline-start: 0;
+    height: 20px;
+    width: 20px;
+    background-color: var(--surface-color);
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+    transition: all 0.2s;
+}
+.custom-checkbox:hover input ~ .checkbox-checkmark {
+    border-color: var(--secondary-color);
+}
+.custom-checkbox input:checked ~ .checkbox-checkmark {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+.checkbox-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.custom-checkbox input:checked ~ .checkbox-checkmark:after {
+    display: block;
+}
+.custom-checkbox .checkbox-checkmark:after {
+    inset-inline-start: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.input-with-icon {
+    position: relative;
+}
+.input-with-icon .icon {
+    position: absolute;
+    inset-inline-start: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--subtle-text-color);
+    pointer-events: none;
+    width: 1.25rem;
+    height: 1.25rem;
+}
+.input-with-icon input {
+    padding-inline-start: 2.5rem;
+    background-color: var(--subtle-background);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    height: 40px;
+    font-weight: 500;
+}
+
+.field-hint {
+    font-size: 0.85rem;
+    color: var(--subtle-text-color);
+    margin-top: 0.5rem;
+}

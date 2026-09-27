@@ -1,0 +1,118 @@
+/* --- BUTTONS --- */
+.btn {
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    font-weight: 500;
+    font-family: inherit;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+}
+.btn:hover {
+    background-color: var(--subtle-background);
+    border-color: #d1d5db;
+}
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: var(--secondary-color-dark);
+    border-color: var(--secondary-color-dark);
+}
+.btn-danger {
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+    color: white;
+}
+.btn-danger:hover {
+    opacity: 0.9;
+    background-color: var(--danger-color);
+    border-color: var(--danger-color);
+}
+.btn-secondary {
+    background-color: var(--subtle-background);
+}
+.btn-secondary:hover {
+    background-color: var(--border-color);
+}
+.btn-notifications {
+    position: relative;
+    padding: 0.75rem; /* Make it more square-like */
+}
+
+.btn-icon {
+    padding: 0.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    color: var(--subtle-text-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-icon:hover {
+    background-color: var(--subtle-background);
+    color: var(--text-color);
+}
+.btn-icon-danger:hover {
+    color: var(--danger-color);
+    background-color: rgba(var(--danger-color), 0.1);
+}
+.btn-icon-primary:hover {
+    color: var(--secondary-color);
+    background-color: rgba(var(--info-color), 0.1);
+}
+.full-width {
+    width: 100%;
+}
+.btn.btn-locked {
+    /* These styles must override .btn-primary, .btn-danger etc. */
+    background-color: var(--surface-color); /* Fallback */
+    border-color: var(--border-color);
+    color: var(--subtle-text-color);
+    box-shadow: none;
+    transform: none;
+    opacity: 0.8;
+    cursor: pointer;
+    /* The gradient with solid colors will paint OVER any other background-color */
+    background-image: repeating-linear-gradient(
+        -45deg,
+        var(--surface-color),
+        var(--surface-color) 10px,
+        rgba(var(--border-color-rgb), 0.3) 10px,
+        rgba(var(--border-color-rgb), 0.3) 20px
+    );
+}
+
+.btn.btn-locked:hover {
+    background-color: var(--subtle-background); /* Fallback */
+    border-color: var(--subtle-text-color);
+    color: var(--text-color);
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+    background-image: repeating-linear-gradient(
+        -45deg,
+        var(--subtle-background),
+        var(--subtle-background) 10px,
+        rgba(var(--border-color-rgb), 0.5) 10px,
+        rgba(var(--border-color-rgb), 0.5) 20px
+    );
+}
+.btn.btn-locked .icon {
+    color: var(--warning-color);
+}

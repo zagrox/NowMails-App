@@ -1,0 +1,38 @@
+@import './styles/00_variables.css';
+@import './styles/01_global.css';
+@import './styles/02_utilities.css';
+@import './styles/03_layout.css';
+
+/* Components */
+@import './styles/components/accordion.css';
+@import './styles/components/badge.css';
+@import './styles/components/button.css';
+@import './styles/components/card.css';
+@import './styles/components/charts.css';
+@import './styles/components/forms.css';
+@import './styles/components/modal.css';
+@import './styles/components/multiselect.css';
+@import './styles/components/progress.css';
+@import './styles/components/tabs.css';
+@import './styles/components/toast.css';
+@import './styles/components/view-switcher.css';
+
+/* Views */
+@import './styles/views/shared.css';
+@import './styles/views/account.css';
+@import './styles/views/auth.css';
+@import './styles/views/buy-credits.css';
+@import './styles/views/campaign-detail.css';
+@import './styles/views/campaigns.css';
+@import './styles/views/contacts.css';
+@import './styles/views/dashboard.css';
+@import './styles/views/domains.css';
+@import './styles/views/email-builder.css';
+@import './styles/views/email-lists.css';
+@import './styles/views/embed.css';
+@import './styles/views/media-manager.css';
+@import './styles/views/onboarding.css';
+@import './styles/views/segments.css';
+@import './styles/views/send-email.css';
+@import './styles/views/send-wizard.css';
+@import './styles/views/smtp.css';

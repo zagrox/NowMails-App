@@ -1,0 +1,299 @@
+/* --- CONTACTS VIEW --- */
+.contacts-view-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.contact-status-filter .card-header {
+    padding: 1rem 1.25rem;
+}
+.contact-status-filter .card-body {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.contact-status-filter-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.contact-status-filter-item:hover {
+    background-color: var(--subtle-background);
+}
+.contact-status-filter-item .custom-checkbox {
+    flex-grow: 1;
+}
+.contact-status-filter-item .badge {
+    background-color: var(--subtle-background);
+    color: var(--text-color);
+    font-weight: 600;
+}
+html[data-theme='dark'] .contact-status-filter-item .badge {
+    background-color: var(--border-color);
+}
+
+.contacts-view-header-sticky {
+    /* This element is no longer sticky, but we'll keep the class name to avoid breaking TSX */
+    padding: 1.25rem;
+    margin: 0;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.contacts-header {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+.contacts-selection-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--surface-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 500;
+    white-space: nowrap;
+}
+.contacts-selection-header:hover {
+    background-color: var(--subtle-background);
+}
+.contacts-selection-header input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.contacts-selection-header .checkbox-checkmark {
+    top: 0;
+    left: 0;
+    position: relative;
+}
+
+.contacts-header .search-bar {
+    flex-grow: 2; /* Give more space to search */
+    min-width: 200px;
+}
+.contacts-header .header-actions {
+    flex-shrink: 1; /* Allow actions to shrink and wrap */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.5rem; /* Tighter gap for wrapped buttons */
+}
+
+.contacts-view-main {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Tablet and below: single column layout */
+@media (max-width: 992px) {
+    .contacts-view-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile: stack header controls */
+@media (max-width: 767px) {
+    .contacts-header {
+        flex-direction: column;
+        width: 100%;
+        align-items: stretch;
+    }
+    .contacts-header .header-actions {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+        gap: 0.5rem;
+        width: 100%;
+        justify-content: end;
+    }
+    .contacts-header .header-actions .btn {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    .contacts-header .header-actions .btn .btn-text {
+        display: none;
+    }
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+.contact-card { 
+    padding: 0; 
+    transition: all 0.2s;
+    cursor: pointer;
+}
+.contact-card:hover {
+    border-color: #d1d5db;
+}
+.contact-card.selected {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(var(--info-color), 0.2);
+    transform: translateY(-2px);
+}
+
+.contact-card-main { display: flex; justify-content: space-between; align-items: flex-start; padding: 1rem; }
+.contact-card-name { font-weight: 600; font-size: 1rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.contact-card-email { font-size: 0.9rem; color: var(--subtle-text-color); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.contact-card-footer { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1rem; border-top: 1px solid var(--border-color); background: var(--subtle-background); }
+.contact-card-footer small { font-size: 0.8rem; color: var(--subtle-text-color); }
+.action-buttons { display: flex; gap: 0.25rem; }
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+.pagination-controls button {
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    font-weight: 500;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.pagination-controls button:hover {
+    background-color: var(--subtle-background);
+    border-color: #d1d5db;
+}
+.pagination-controls button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.pagination-controls .pagination-page-info {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--subtle-text-color);
+    min-width: 80px;
+    text-align: center;
+}
+
+.contact-details-grid, .file-details-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.75rem 1.5rem;
+    align-items: center;
+}
+.contact-details-grid dt, .file-details-grid dt { font-weight: 500; color: var(--subtle-text-color); }
+.contact-details-grid .grid-separator { grid-column: 1 / -1; border-bottom: 1px solid var(--border-color); margin: 1rem 0; padding-bottom: 0.5rem; }
+.contact-details-grid .full-width-dd { grid-column: 1 / -1; }
+.file-dropzone {
+    border: 2px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+.file-dropzone:hover, .file-dropzone.drag-over {
+    border-color: var(--secondary-color);
+    background-color: var(--subtle-background);
+}
+.file-dropzone p {
+    color: var(--subtle-text-color);
+    margin: 0;
+}
+.file-dropzone p strong {
+    color: var(--secondary-color);
+}
+.file-dropzone .file-name {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* --- BULK ACTIONS --- */
+.bulk-actions-bar {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 300px);
+    max-width: 800px;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 50;
+    animation: slideUp 0.3s ease-out;
+}
+@media (max-width: 768px) {
+    .bulk-actions-bar {
+        width: calc(100% - 2rem);
+        bottom: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+@keyframes slideUp {
+    from { transform: translateX(-50%) translateY(100%); opacity: 0; }
+    to { transform: translateX(-50%) translateY(0); opacity: 1; }
+}
+.bulk-actions-bar-info {
+    font-weight: 600;
+}
+.bulk-actions-bar-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+/* --- DYNAMIC CUSTOM FIELDS IN MODAL --- */
+.dynamic-fields-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+.dynamic-field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 0.75rem;
+    align-items: center;
+}
+.dynamic-field-row .btn-icon {
+    margin-top: -0.25rem; /* Align better with inputs */
+}
+
+/* --- CONTACT DETAIL VIEW --- */
+.contact-detail-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .contact-detail-grid {
+        grid-template-columns: 1fr;
+    }
+}

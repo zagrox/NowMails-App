@@ -1,0 +1,214 @@
+
+.guides-view-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.guides-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+}
+
+@media (max-width: 992px) {
+    .guides-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.guides-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.guides-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.guides-nav-item:hover {
+    background-color: var(--subtle-background);
+}
+
+.guides-nav-item.active {
+    background-color: var(--secondary-color-translucent);
+    color: var(--secondary-color);
+}
+
+.guides-nav-item .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.guides-content .card-body {
+    padding: 1.5rem;
+}
+
+.guides-content-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.guides-content-header .icon {
+    width: 32px;
+    height: 32px;
+    color: var(--secondary-color);
+}
+
+.guides-content-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.step-by-step-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.step-item {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.step-number {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.step-content h4 {
+    margin: 0 0 0.5rem;
+    font-size: 1.1rem;
+}
+
+.step-content p {
+    margin: 0;
+    color: var(--subtle-text-color);
+    line-height: 1.6;
+}
+
+.step-content p code {
+    background-color: var(--subtle-background);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+}
+
+.help-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.help-card {
+    padding: 1.5rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.help-card:not(:disabled):hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+}
+
+.help-card h4 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.help-card p {
+    margin: 0;
+    color: var(--subtle-text-color);
+    font-size: 0.9rem;
+    flex-grow: 1;
+}
+
+.help-card .icon {
+    width: 32px;
+    height: 32px;
+    color: var(--secondary-color);
+}
+
+.soon-badge-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border-radius: 0 0 0 8px;
+}
+.help-card:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.contact-info-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: var(--subtle-background);
+    border-radius: 8px;
+}
+
+.contact-info-item .icon {
+    width: 28px;
+    height: 28px;
+    color: var(--secondary-color);
+}
+
+.contact-info-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-info-text span {
+    font-size: 0.9rem;
+    color: var(--subtle-text-color);
+}
+
+.contact-info-text strong {
+    font-size: 1rem;
+    font-weight: 500;
+}

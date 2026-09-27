@@ -1,0 +1,105 @@
+/* --- CAMPAIGN DETAIL VIEW --- */
+.campaign-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+.campaign-detail-header h2 {
+    font-size: 2.4rem;
+    margin: 0;
+    font-weight: 700;
+    word-break: break-all;
+}
+.campaign-detail-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.kpi-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+.campaign-detail-content-preview {
+    width: 100%;
+    height: 60vh;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.campaign-report-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.campaign-stats-table-card .table-container-simple {
+    border: none;
+    border-radius: 0;
+}
+
+.campaign-stats-table-card table {
+    width: 100%;
+}
+.campaign-stats-table-card .simple-table th {
+    padding: 0.75rem 1rem;
+    background: var(--surface-color);
+    text-align: start;
+}
+.campaign-stats-table-card td {
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+}
+.campaign-stats-table-card tr:hover {
+    background-color: var(--subtle-background);
+}
+.campaign-stats-table-card .badge {
+    min-width: 60px;
+    text-align: center;
+}
+
+.final-summary-container {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2rem;
+}
+
+.final-summary-container h3 {
+    font-size: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.final-summary-grid {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 1.5rem 2rem;
+    align-items: center;
+}
+
+.final-summary-grid dt {
+    color: var(--subtle-text-color);
+    font-weight: 500;
+}
+
+.final-summary-grid dd {
+    text-align: end;
+    font-weight: 600;
+    word-break: break-all;
+}
+
+.final-summary-grid .separator {
+    grid-column: 1 / -1;
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 0.5rem 0;
+}

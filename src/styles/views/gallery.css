@@ -1,0 +1,122 @@
+/* --- GALLERY VIEW --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.gallery-template-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+
+.gallery-template-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.gallery-card-preview-wrapper {
+    aspect-ratio: 4 / 3;
+    background-color: var(--subtle-background);
+    overflow: hidden;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery-card-preview-wrapper iframe,
+.gallery-card-preview-image {
+    width: 800px;
+    height: 600px;
+    transform: scale(0.45);
+    transform-origin: top left;
+    border: none;
+    pointer-events: none;
+    background-color: #fff;
+}
+
+.gallery-card-preview-image {
+    object-fit: cover;
+    object-position: top;
+    transform: none; /* Override iframe scaling */
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-card-loader {
+    position: absolute;
+}
+
+.gallery-card-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery-card-content h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.gallery-card-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping on small cards */
+    gap: 1rem; /* Increase gap for clarity */
+    margin-bottom: 0.75rem;
+    min-height: 24px;
+}
+
+.meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.color-swatch div {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--surface-color);
+    box-shadow: 0 0 0 1px var(--border-color);
+    flex-shrink: 0;
+}
+
+.language-tag {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--subtle-text-color);
+}
+
+.language-tag .icon {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+}
+
+.gallery-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
+}
+
+.gallery-card-actions {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+}
+.gallery-card-actions .btn {
+    flex-grow: 1;
+}

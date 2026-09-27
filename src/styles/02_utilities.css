@@ -1,0 +1,120 @@
+/* --- UTILITIES & HELPERS --- */
+.centered-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
+  gap: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.loader {
+  border: 4px solid var(--border-color);
+  border-top: 4px solid var(--secondary-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* --- NEW LINE LOADER --- */
+.line-loader {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 6px;
+    background-color: var(--border-color);
+    border-radius: 3px;
+}
+
+.line-loader::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+    animation: indeterminate-progress 1.5s infinite ease-in-out;
+}
+
+@keyframes indeterminate-progress {
+    0% {
+        transform: translateX(-125%);
+    }
+    100% {
+        transform: translateX(275%);
+    }
+}
+
+.btn .loader, .form-actions .loader, .campaign-stats-grid .loader {
+    width: 20px;
+    height: 20px;
+    border-width: 3px;
+}
+.campaign-stats-grid .loader {
+    margin: 0 auto;
+}
+.balance-amount .loader {
+    width: 28px;
+    height: 28px;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  50% {
+    opacity: .5;
+  }
+}
+
+.info-message {
+    padding: 1.5rem;
+    margin: 1em 0;
+    background: var(--surface-color);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+.info-message.warning {
+    background-color: rgba(var(--warning-color), 0.1);
+    border-color: rgba(var(--warning-color), 0.3);
+}
+.info-message strong {
+    font-weight: 600;
+}
+.info-message p {
+    color: var(--subtle-text-color);
+    font-size: 0.9rem;
+}
+.link-button {
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    cursor: pointer;
+    font: inherit;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.error-message {
+    padding: 1rem;
+    background: rgba(var(--danger-color), 0.1);
+    color: var(--danger-color);
+    border-inline-start: 4px solid var(--danger-color);
+    white-space: pre-wrap;
+    word-break: break-word;
+}

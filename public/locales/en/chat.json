@@ -1,0 +1,24 @@
+
+{
+    "supportChat": "Support Chat",
+    "openChat": "Open support chat",
+    "closeChat": "Close chat",
+    "typeMessage": "Type a message...",
+    "initialMessage": "What can I help you with? **For example, you can ask:**\n* How do I improve my email open rates?\n* Can you give me 5 subject line ideas for a summer sale?",
+    "fallbackMessage": "Sorry, I could not process that.",
+    "connectionError": "I'm sorry, I couldn't connect to the support chat. Please try again later.",
+    "premadeQuestion1": "What is MegaMail?",
+    "premadeQuestion2": "How do I buy credits?",
+    "premadeQuestion3": "How do I upload contacts?",
+    "goToBuyCredits": "Go to Buy Credits",
+    "goToDashboard": "Go to Dashboard",
+    "goToContacts": "Go to Contacts",
+    "goToCampaigns": "Go to Campaigns",
+    "goToTemplates": "Go to Templates",
+    "goToDomainSettings": "Go to Domain Settings",
+    "goToApiSettings": "Go to API Key Settings",
+    "goToSmtpSettings": "Go to SMTP Settings",
+    "goToProfile": "Go to Profile",
+    "goToOrders": "Go to Orders",
+    "chatWithHuman": "Chat with Human"
+}

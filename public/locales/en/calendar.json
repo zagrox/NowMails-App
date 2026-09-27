@@ -1,0 +1,9 @@
+
+{
+    "today": "Today",
+    "nextMonth": "Next Month",
+    "prevMonth": "Prev Month",
+    "noEventsThisMonth": "No events scheduled for this month.",
+    "gridView": "Grid View",
+    "listView": "List View"
+}

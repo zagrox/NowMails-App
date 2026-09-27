@@ -1,0 +1,43 @@
+.view-subtitle {
+    color: var(--subtle-text-color);
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.predefined-fields-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.predefined-fields-list li {
+    background-color: var(--subtle-background);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    /* New styles for parts */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5ch; /* small gap between parts */
+}
+
+.field-label-translated {
+    font-weight: 600;
+}
+
+.field-name-en {
+    font-family: 'Inter', sans-serif; /* Use english font */
+    color: var(--subtle-text-color);
+    font-weight: 500;
+    font-size: 0.9em;
+}
+
+.field-desc {
+    color: var(--subtle-text-color);
+}

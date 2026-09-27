@@ -1,0 +1,18 @@
+{
+  "name": "NowMails - Email Marketing Platform",
+  "short_name": "NowMails",
+  "description": "Your complete email marketing solution, powered by NowMails",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#F7F9FC",
+  "theme_color": "#1A2B3C",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://crm.megamail.ir/assets/8156ea40-b926-4b3e-9a64-2e20370cc295",
+      "type": "image/png",
+      "purpose": "any maskable",
+      "sizes": "512x512"
+    }
+  ]
+}

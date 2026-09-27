@@ -1,0 +1,61 @@
+/* --- ACCORDION --- */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.accordion-item {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--surface-color);
+}
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    background-color: var(--subtle-background);
+    border-bottom: 1px solid transparent; /* Reserve space */
+    transition: background-color 0.2s;
+}
+.accordion-header.open {
+    border-bottom: 1px solid var(--border-color);
+}
+.accordion-header .accordion-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    flex-grow: 1;
+}
+.accordion-icon {
+    transition: transform 0.2s ease-in-out;
+}
+.accordion-icon.open {
+    transform: rotate(180deg);
+}
+.accordion-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.content-variant-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.content-variant-tab {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+    color: var(--subtle-text-color);
+}
+.content-variant-tab.active {
+    color: var(--secondary-color);
+    border-bottom-color: var(--secondary-color);
+}

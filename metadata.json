@@ -1,0 +1,9 @@
+{
+  "name": "Remix MegaMail to NowMails",
+  "description": "Professional Email Marketing & Automation Platform for modern businesses.",
+  "requestFramePermissions": [],
+  "prompt": "",
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

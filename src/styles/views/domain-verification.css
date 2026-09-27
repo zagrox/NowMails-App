@@ -1,0 +1,69 @@
+.domain-verification-view {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.verification-records-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.verification-record-card {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.verification-record-card .card-header h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+.verification-record-card .record-instruction {
+    font-size: 0.9rem;
+    color: var(--subtle-text-color);
+    margin-bottom: 1.5rem;
+}
+.record-details-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem 1.5rem;
+    align-items: center;
+}
+.record-details-grid span {
+    font-weight: 500;
+    color: var(--subtle-text-color);
+}
+.copyable-field {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background-color: var(--subtle-background);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 0.5rem;
+}
+.copyable-field code {
+    flex-grow: 1;
+    word-break: break-all;
+    font-family: monospace;
+}
+.copyable-field .btn-icon {
+    flex-shrink: 0;
+}
+
+.verification-record-card .card-footer {
+    margin-top: auto; /* Push footer to the bottom */
+    background-color: var(--subtle-background);
+    justify-content: flex-end;
+}
+.verification-record-card .card-footer .btn .loader {
+    width: 16px;
+    height: 16px;
+}
+
+@media (max-width: 992px) {
+    .verification-records-grid {
+        grid-template-columns: 1fr;
+    }
+}
