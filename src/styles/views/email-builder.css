@@ -243,7 +243,7 @@
     padding-right: 1rem;
 }
 .canvas-item-actions-bar-left span {
-    font-size: 0.8rem;
+    font-size: 13px;
     font-weight: 500;
 }
 .canvas-item-actions-bar-right {
@@ -350,7 +350,7 @@
     border-radius: 6px;
     cursor: pointer;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 13px;
     color: var(--text-color);
 }
 .add-block-popover-item:hover {
@@ -621,7 +621,7 @@
 }
 .panel-input-with-unit .unit-label {
     padding: 0 0.5rem;
-    font-size: 0.8rem;
+    font-size: 13px;
     color: var(--subtle-text-color);
     background: var(--subtle-background);
     align-self: stretch;
@@ -694,7 +694,7 @@
     margin: 0 0 0.1rem;
 }
 .file-grid-card-select-meta {
-    font-size: 0.8rem;
+    font-size: 13px;
     opacity: 0.9;
     margin: 0;
 }
@@ -808,7 +808,7 @@
         padding: 0.2rem 0.4rem;
     }
     .canvas-item-actions-bar-left span {
-        font-size: 0.75rem;
+        font-size: 13px;
     }
     
     .settings-panel-wrapper {

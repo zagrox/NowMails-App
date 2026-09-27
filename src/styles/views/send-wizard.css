@@ -196,7 +196,7 @@
         background: none !important;
     }
     .wizard-sidebar-step .wizard-step-title {
-        font-size: 0.8rem;
+        font-size: 13px;
         text-align: center;
     }
     .wizard-content {

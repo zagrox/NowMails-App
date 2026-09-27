@@ -116,13 +116,13 @@
     text-align: center;
 }
 .campaign-stat-item .stat-value {
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     font-weight: 700;
     display: block;
     line-height: 1.2;
 }
 .campaign-stat-item .stat-label {
-    font-size: 0.75rem;
+    font-size: 13px;
     color: var(--subtle-text-color);
     text-transform: uppercase;
     margin-top: 0.25rem;
@@ -143,7 +143,7 @@
 }
 
 .campaign-row-subject {
-    font-size: 0.9rem;
+    font-size: 13.5px;
     color: var(--subtle-text-color);
     margin-top: 0.25rem;
     white-space: nowrap;
@@ -155,7 +155,7 @@
     margin-top: 0.5rem;
 }
 .campaign-row-date {
-    font-size: 0.8rem;
+    font-size: 13px;
     color: var(--subtle-text-color);
     margin-top: 0.5rem;
 }

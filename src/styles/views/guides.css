@@ -271,7 +271,7 @@
     inset-inline-end: 1rem; /* FIX: Use logical property for right/left position */
     background-color: var(--warning-color);
     color: var(--primary-color);
-    font-size: 0.7rem;
+    font-size: 13px;
     font-weight: 600;
     padding: 0.25rem 0.6rem;
     border-radius: 99px;

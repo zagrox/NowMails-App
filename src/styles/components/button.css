@@ -1,13 +1,13 @@
 /* --- BUTTONS --- */
 .btn {
-    padding: 0.75rem 1.25rem;
+    padding: 0.65rem 1.15rem;
     border-radius: 6px;
     border: 1px solid var(--border-color);
     background-color: var(--surface-color);
     color: var(--text-color);
     font-weight: 500;
     font-family: inherit;
-    font-size: 0.95rem;
+    font-size: 13.5px;
     cursor: pointer;
     transition: all 0.2s;
     display: inline-flex;

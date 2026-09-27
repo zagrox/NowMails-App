@@ -61,7 +61,7 @@
 
 .credits-card-cta__label {
   display: block;
-  font-size: 0.85rem;
+  font-size: 13px;
   color: var(--subtle-text-color);
   font-weight: 500;
 }
@@ -69,10 +69,10 @@
 .credits-card-cta__value {
   display: flex;
   align-items: center;
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   font-weight: 700;
   line-height: 1.2;
-  min-height: 30px; /* to prevent layout shift during loading */
+  min-height: 28px; /* to prevent layout shift during loading */
 }
 
 .credits-card-cta__value .loader {
@@ -210,13 +210,14 @@ html[data-theme='dark'] .cta-banner {
 }
 
 .narrow-stat-card-title {
-    font-size: 0.9rem;
+    font-size: 13px;
+    font-weight: 500;
     color: var(--subtle-text-color);
     margin-right: auto;
     white-space: nowrap;
 }
 .narrow-stat-card-value {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: 700;
     white-space: nowrap;
     overflow: hidden;
@@ -237,35 +238,37 @@ html[data-theme='dark'] .cta-banner {
 
 
 .dashboard-section {
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
 .dashboard-section-header {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 .dashboard-section-header h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
     margin-bottom: 0.25rem;
 }
 .dashboard-section-header p {
+    font-size: 13.5px;
     color: var(--subtle-text-color);
 }
 .dashboard-nav-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
+    gap: 1.25rem;
 }
 .nav-card {
-    padding: 1.25rem 1.5rem;
+    padding: 1.1rem 1.25rem;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     align-items: center;
-    gap: 1.25rem;
+    gap: 1.1rem;
     position: relative;
 }
 .nav-card-icon {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.2rem;
+    height: 2.2rem;
     color: var(--secondary-color);
     flex-shrink: 0;
 }
@@ -273,12 +276,12 @@ html[data-theme='dark'] .cta-banner {
     flex-grow: 1;
 }
 .nav-card-title {
-    font-size: 1.1rem;
+    font-size: 14.5px;
     font-weight: 600;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.2rem;
 }
 .nav-card-description {
-    font-size: 0.9rem;
+    font-size: 13px;
     color: var(--subtle-text-color);
     line-height: 1.4;
 }

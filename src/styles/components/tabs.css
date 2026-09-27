@@ -13,7 +13,7 @@
 /* Let browser handle scrollbar visibility for mobile-first experience */
 
 .tab-btn {
-    padding: 0.75rem 1.25rem;
+    padding: 0.65rem 1.15rem;
     cursor: pointer;
     background: none;
     border: none;
@@ -21,7 +21,7 @@
     color: var(--subtle-text-color);
     font: inherit;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 13.5px;
     display: flex;
     align-items: center;
     gap: 0.5rem;

@@ -10,7 +10,7 @@
     stroke-dasharray: 2 4;
 }
 .axis-label {
-    font-size: 0.75rem;
+    font-size: 13px;
     fill: var(--subtle-text-color);
 }
 .plot-line {
@@ -38,7 +38,7 @@
     padding: 0.75rem 1rem;
     border-radius: 8px;
     pointer-events: none;
-    font-size: 0.85rem;
+    font-size: 13px;
     backdrop-filter: blur(4px);
     border: 1px solid var(--tooltip-border-color);
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
@@ -70,7 +70,7 @@
     justify-content: center;
     gap: 1.5rem;
     margin-top: 1rem;
-    font-size: 0.9rem;
+    font-size: 13px;
     flex-wrap: wrap;
 }
 .overall-snapshot-grid {
